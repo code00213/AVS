@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVS – Your Handsome Freelancer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Hero Section with AVS Branding -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative">
+    <!-- Glow -->
+    <div class="absolute top-1/2 w-full h-[300px] bg-lime-400 opacity-10 blur-3xl rounded-full -z-10"></div>
+
+    <!-- AVS Logo -->
+    <div class="w-24 h-24 rounded-full bg-lime-400 text-black flex items-center justify-center text-3xl font-bold mb-6 shadow-lg">
+      AVS
+    </div>
+
+    <!-- Fun Intro -->
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+      I’m AVS —<br class="hidden md:inline" /> your handsome freelancer 😎
+    </h1>
+
+    <p class="text-gray-300 max-w-xl mb-6">
+      Talented. Reliable. Stylish. Click the button and I’ll show you exactly what I can do for you.
+    </p>
+
+    <!-- Button to reveal skills -->
+    <button onclick="revealSkills()" class="bg-lime-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-lime-300 transition">
+      Let's See What I Can Do 😏
+    </button>
+
+    <!-- Skill Reveal Box -->
+    <div id="skillsBox" class="mt-8 hidden text-left bg-gray-900 border border-gray-700 rounded-xl p-6 max-w-xl w-full">
+      <p class="text-lime-400 font-bold mb-2">Here’s a bit about me and what I bring to the table:</p>
+
+      <!-- Extra info toggle -->
+      <button onclick="revealMore()" class="mb-4 bg-lime-500 text-black px-4 py-1 rounded-full hover:bg-lime-400 transition text-sm">
+        Want to know more? Click me 😉
+      </button>
+
+      <!-- Skills List -->
+      <ul class="list-disc list-inside text-gray-200 space-y-1">
+        <li>Experienced in BPO customer service (Delta Airlines account) — professional, efficient, and empathetic</li>
+        <li>Skilled in solving problems, managing tasks, and supporting clients with confidence</li>
+        <li>Hands-on knowledge in ICT programming and computer systems (NCII certified)</li>
+        <li>Proficient with tools like Excel, Word, PowerPoint, and Canva for real productivity</li>
+        <li>Work immersion experience in an animation lab — supported students and handled technical challenges</li>
+        <li>Creative thinker, quick learner, and always ready to level up</li>
+        <li>...and yes, just the right amount of charm to make it all work smoothly 😏</li>
+      </ul>
+
+      <!-- More Info -->
+      <div id="moreInfo" class="mt-4 hidden text-sm text-gray-400">
+        <p>
+          Born in Lopez, Quezon. Graduate of Batasan Hills National High School (ICT Programming Track).  
+          Certified in Computer Systems Servicing (NCII). I'm passionate about learning, adapting, and leveling up in the digital world.
+        </p>
+        <p class="mt-2">
+          Want the full story? 
+          <a href="https://code00213.github.io/-RESUME/" class="text-lime-400 underline hover:text-lime-300">See my full resume</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function revealSkills() {
+      const box = document.getElementById("skillsBox");
+      box.classList.remove("hidden");
+      box.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function revealMore() {
+      const more = document.getElementById("moreInfo");
+      more.classList.toggle("hidden");
+    }
+  </script>
+
+</body>
+</html>
